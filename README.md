@@ -11,3 +11,8 @@
 + crawl_info.py 爬取某页的类，写入redis，以 category 命名的 set
 + main.py 实现并发，mult_gevent('目录'，页码数，‘是否写入文件’)
 + get_category.py 返回 目录：url 的一个字典
+
+### 测试
++ 指定爬取 音乐 类，指定爬取 1000 页，耗时 1271s，应该得到数据 40000 条，实际得到 39800
+！[测试用时](https://github.com/syunhan/acgnx/1000test.png)
+！[抓取结果](https://github.com/syunhan/acgnx/39800.png)
