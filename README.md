@@ -6,3 +6,8 @@
 ### 并发，写入文件
 + 因为涉及到 url 队列，所以使用多线程或多进程或携程时，读同一个 url 队列，可以使用 Queue 模块，也可以用 redis，同一个redis节点对并发的请求是序列化的，而且因为不会涉及到 read&write 操作，所以不需要加锁。
 + 先将爬下来的字段写入redis set, 然后再写入文件。否则原因同上，多线程或多进程对同一文件进行操作需要用到文件锁
+
+### 文件说明
++ crawl_info.py 爬取某页的类，写入redis，以 category 命名的 set
++ main.py 实现并发，mult_gevent('目录'，页码数，‘是否写入文件’)
++ get_category.py 返回 目录：url 的一个字典
