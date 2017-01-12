@@ -14,5 +14,3 @@
 
 ### 测试
 + 指定爬取 音乐 类，指定爬取 1000 页，耗时 1271s，应该得到数据 40000 条，实际得到 39800
-！[测试用时](https://github.com/syunhan/acgnx/1000test.png)
-！[抓取结果](https://github.com/syunhan/acgnx/39800.png)
